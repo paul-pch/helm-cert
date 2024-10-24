@@ -14,7 +14,8 @@ image:
   tag: 'master'
 
 imagePullSecrets:
-  - name: 'default-secret'
+  - name: registry-pull-secret
+  # - name: 'default-secret'
 nameOverride: ''
 fullnameOverride: ''
 
