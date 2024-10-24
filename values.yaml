@@ -8,7 +8,7 @@ environnement: ovh
 phase: dev
 
 image:
-  repository: harbor.apps.dso.numerique-interieur.com/mi-service-team/java-demo
+  repository: harbor.apps.dso.numerique-interieur.com/mi-service-team
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: 'master'
