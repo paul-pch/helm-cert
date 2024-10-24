@@ -12,12 +12,12 @@ image:
   name: java-demo
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "master"
+  tag: 'master'
 
 imagePullSecrets:
-  - name: "default-secret"
-nameOverride: ""
-fullnameOverride: ""
+  - name: 'default-secret'
+nameOverride: ''
+fullnameOverride: ''
 
 service:
   type: NodePort
@@ -31,21 +31,21 @@ ingress:
 
 resources:
   limits:
-    memory: "512Mi"
-    cpu: "1"
+    memory: '512Mi'
+    cpu: '1'
   requests:
-    memory: "512Mi"
-    cpu: "500Mi"
+    memory: '512Mi'
+    cpu: '500m'
 
 global:
   postgresql:
     auth:
       existingSecret: my-secret
       secretKeys:
-        userPasswordKey: "PG_PASSWORD"
-        adminPasswordKey: "PG_PASSWORD"
-      username: "userdemo"
-      database: "demodb"
+        userPasswordKey: 'PG_PASSWORD'
+        adminPasswordKey: 'PG_PASSWORD'
+      username: 'userdemo'
+      database: 'demodb'
 
 # Contrainte de sécurité Openshift
 postgresql:
@@ -53,7 +53,7 @@ postgresql:
   volumePermissions:
     enabled: false
     securityContext:
-      runAsUser: "auto"
+      runAsUser: 'auto'
   securityContext:
     enabled: false
   shmVolume:
@@ -66,15 +66,15 @@ postgresql:
   primary:
     resources:
       limits:
-        memory: "512Mi"
-        cpu: "1"
+        memory: '512Mi'
+        cpu: '1'
       requests:
-        memory: "512Mi"
-        cpu: "1"
+        memory: '512Mi'
+        cpu: '1'
     volumePermissions:
       enabled: false
       securityContext:
-        runAsUser: "auto"
+        runAsUser: 'auto'
     securityContext:
       enabled: false
     shmVolume:
