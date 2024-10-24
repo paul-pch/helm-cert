@@ -8,7 +8,7 @@ environnement: ovh
 phase: dev
 
 image:
-  repository: harbor.apps.dso.numerique-interieur.com/mi-crtpch/javanaise-demo
+  repository: harbor.apps.dso.numerique-interieur.com/mi-service-team/javanaise-demo
   pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
   tag: 'master'
