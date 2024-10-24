@@ -4,3 +4,5 @@ secrets/*
 key.txt
 keys.txt
 **/*.dec
+.vscode
+secret.sops.yaml
